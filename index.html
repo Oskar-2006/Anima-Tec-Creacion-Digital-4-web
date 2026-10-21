@@ -198,6 +198,19 @@ body {
 .urows { display: grid; align-content: center; gap: calc(54 * var(--u)); }
 .urow { display: grid; gap: calc(14 * var(--u)); }
 
+
+/* ---------- Concept art (diapositivas 9 a 12) ---------- */
+.sc .copy { align-content: start; gap: calc(36 * var(--u)); }
+.sheet { display: block; height: calc(780 * var(--u)); width: auto; max-width: 100%; justify-self: center; border: 1px solid rgba(243, 238, 230, 0.12); }
+.cgrid { display: flex; gap: calc(80 * var(--u)); align-items: flex-start; justify-content: center; }
+.fig { display: grid; gap: calc(22 * var(--u)); justify-items: start; margin: 0; }
+.fig figcaption { display: grid; gap: calc(8 * var(--u)); }
+.cap { font-size: calc(30 * var(--u)); line-height: 1.3; color: var(--text); }
+.crop { background-image: url("media/concept-art.jpg"); background-repeat: no-repeat; border: 1px solid rgba(243, 238, 230, 0.12); }
+.sc4 { grid-template-columns: 1fr auto; column-gap: calc(120 * var(--u)); }
+.sc4 .tall { align-self: center; z-index: 1; }
+.sc4 .orb { left: calc(160 * var(--u)); top: calc(700 * var(--u)); width: calc(300 * var(--u)); height: calc(300 * var(--u)); }
+
 /* ---------- Diapositiva 8 ---------- */
 .s8 .copy { align-content: start; gap: calc(40 * var(--u)); }
 .cards { display: grid; grid-template-columns: 1fr 1fr; gap: calc(24 * var(--u)); }
@@ -310,6 +323,12 @@ body {
   .s6 .copy, .s8 .copy { gap: 28px; }
   .copy { gap: 22px; }
 
+  .sheet { height: auto; width: 100%; }
+  .cgrid { flex-direction: column; gap: 28px; align-items: stretch; }
+  .fig { width: 100%; justify-items: stretch; }
+  .crop { height: auto !important; width: 100%; }
+  .sc4 { grid-template-columns: 1fr !important; }
+  .sc4 .tall { justify-self: start; width: 60%; margin-top: 24px; }
   .chrome { left: 16px; right: 16px; bottom: 12px; }
   .counter { font-size: 12px; }
   .nav { min-width: 44px; min-height: 44px; }
@@ -448,24 +467,68 @@ body {
     </div>
   </section>
 
-  <!-- 9. SIGUIENTE -->
-  <section class="slide s9" aria-roledescription="diapositiva" aria-label="9 de 9">
+  <!-- 9. CONCEPT ART: HOJA COMPLETA -->
+  <section class="slide sc sc1" aria-roledescription="diapositiva">
+    <div class="copy">
+      <p class="label">CONCEPT ART</p>
+      <img class="sheet" src="media/concept-art.jpg" alt="Hoja de concept art: la actriz, la IA, el corazón robótico, el alma, las transformaciones y las siluetas finales" decoding="async">
+    </div>
+  </section>
+
+  <!-- 10. PERSONAJES -->
+  <section class="slide sc sc2" aria-roledescription="diapositiva">
+    <div class="copy">
+      <p class="label">CONCEPT ART · PERSONAJES</p>
+      <div class="cgrid">
+        <figure class="fig"><div class="crop" role="img" aria-label="Concept art" style="height:calc(600 * var(--u));aspect-ratio:303/236;background-size:237.62% 204.24%;background-position:0.00% 0.00%"></div><figcaption><span class="t-row">La actriz</span><span class="cap">Escenario · emoción · humanidad</span></figcaption></figure>
+        <figure class="fig"><div class="crop" role="img" aria-label="Concept art" style="height:calc(600 * var(--u));aspect-ratio:265/238;background-size:271.70% 202.52%;background-position:67.03% 0.00%"></div><figcaption><span class="t-row">La IA</span><span class="cap">Observa · aprende · imita</span></figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- 11. TRANSFORMACIONES -->
+  <section class="slide sc sc3" aria-roledescription="diapositiva">
+    <div class="copy">
+      <p class="label">CONCEPT ART · TRANSFORMACIÓN</p>
+      <div class="cgrid">
+        <figure class="fig"><div class="crop" role="img" aria-label="Concept art" style="height:calc(600 * var(--u));aspect-ratio:278/239;background-size:258.99% 201.67%;background-position:1.13% 100.00%"></div><figcaption><span class="t-row">Transformación de la IA</span><span class="cap">Del aprendizaje a la humanidad</span></figcaption></figure>
+        <figure class="fig"><div class="crop" role="img" aria-label="Concept art" style="height:calc(600 * var(--u));aspect-ratio:287/239;background-size:250.87% 201.67%;background-position:65.36% 100.00%"></div><figcaption><span class="t-row">Transformación de la actriz</span><span class="cap">De la vida a la desconexión</span></figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- 12. CORAZON, ALMA, SILUETAS -->
+  <section class="slide sc sc4" aria-roledescription="diapositiva">
+    <div class="art orb" aria-hidden="true"></div>
+    <div class="copy">
+      <p class="label">CONCEPT ART · EL INTERCAMBIO</p>
+      <h2 class="t-h">Corazón, alma y siluetas</h2>
+      <div class="urows">
+        <div class="urow"><p class="t-row">El corazón robótico</p><p class="t-body">El intercambio.</p></div>
+        <div class="urow"><p class="t-row">El alma</p><p class="t-body">Lo que no se puede generar.</p></div>
+        <div class="urow"><p class="t-row">Siluetas finales</p><p class="t-body">¿Quién es quién?</p></div>
+      </div>
+    </div>
+    <div class="tall"><div class="crop" role="img" aria-label="Concept art" style="height:calc(780 * var(--u));aspect-ratio:140/482;background-size:514.29% 100.00%;background-position:100.00% 0.00%"></div></div>
+  </section>
+
+  <!-- 13. SIGUIENTE -->
+  <section class="slide s9" aria-roledescription="diapositiva">
     <div class="art orb" aria-hidden="true"></div>
     <div class="copy">
       <p class="label">LO QUE VIENE</p>
-      <h2 class="t-h">Esperando el concept art</h2>
+      <h2 class="t-h">Del concept art a la animación</h2>
     </div>
     <div class="frows">
       <div class="frow"><span class="dot" aria-hidden="true"></span><p class="t-item">Animación: fragmento mínimo de 3 segundos, centrado en el intercambio.</p></div>
       <div class="frow"><span class="dot" aria-hidden="true"></span><p class="t-item">Posproducción: storyboard de 30 segundos.</p></div>
-      <div class="frow"><span class="dot" aria-hidden="true"></span><p class="t-item">Concept art: base visual para ambas.</p></div>
     </div>
     <p class="note t-note">Reparto de roles sin asignar.</p>
   </section>
 
   <!-- Controles: barra de progreso, contador y botones -->
   <div class="chrome">
-    <div class="counter" aria-live="polite">01 / 09</div>
+    <div class="counter" aria-live="polite">01 / 13</div>
   </div>
   <div class="progress" aria-hidden="true"><i></i></div>
 
@@ -477,6 +540,7 @@ body {
   var stage = document.getElementById('stage');
   var slides = Array.prototype.slice.call(stage.querySelectorAll('.slide'));
   var total = slides.length;
+  slides.forEach(function (sl, k) { sl.setAttribute('aria-label', (k + 1) + ' de ' + total); });
   var counter = stage.querySelector('.counter');
   var bar = stage.querySelector('.progress i');
   var current = 0;
